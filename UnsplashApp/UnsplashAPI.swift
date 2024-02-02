@@ -14,6 +14,7 @@ struct UnsplashAPI {
     let clientIdQueryParam: String = "client_id"
     
     let photosPath: String = "/photos"
+    let topicsPath: String = "/topics"
     
     // Construit un objet URLComponents avec la base de l'API Unsplash
     // Et un query item "client_id" avec la clé d'API retrouvé depuis PListManager
@@ -42,4 +43,22 @@ struct UnsplashAPI {
                 
         return components.url
     }
+    
+    func feedUrlWithSlugs(slugs: String? = nil, orderBy: String = "popular", perPage: Int = 10) -> URL? {
+        var components = unsplashApiBaseUrl()
+        components.path += "\(topicsPath)"
+        
+        if let pathSlugs = slugs {
+            components.path += "/\(pathSlugs)\(photosPath)"
+        }
+        
+        let orderByQueryItem = URLQueryItem(name: "order_by", value: orderBy)
+        let perPageQueryItem = URLQueryItem(name: "per_page", value: "\(perPage)")
+        
+        if components.queryItems != nil {
+            components.queryItems! += [orderByQueryItem, perPageQueryItem]
+        }
+                
+        return components.url
+    }   
 }

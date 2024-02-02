@@ -16,6 +16,8 @@
 		8C305E9B2B6CF22F0003CAC4 /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305E9A2B6CF22E0003CAC4 /* UnsplashAPI.swift */; };
 		8C305E9D2B6CF7000003CAC4 /* FeedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305E9C2B6CF7000003CAC4 /* FeedState.swift */; };
 		8C305E9F2B6CFBD70003CAC4 /* UnsplashPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305E9E2B6CFBD70003CAC4 /* UnsplashPhoto.swift */; };
+		8C305EA12B6D1ECB0003CAC4 /* UnsplashTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305EA02B6D1ECB0003CAC4 /* UnsplashTopic.swift */; };
+		8C305EA32B6D27E50003CAC4 /* TopicFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305EA22B6D27E50003CAC4 /* TopicFeed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		8C305E9A2B6CF22E0003CAC4 /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		8C305E9C2B6CF7000003CAC4 /* FeedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedState.swift; sourceTree = "<group>"; };
 		8C305E9E2B6CFBD70003CAC4 /* UnsplashPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashPhoto.swift; sourceTree = "<group>"; };
+		8C305EA02B6D1ECB0003CAC4 /* UnsplashTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashTopic.swift; sourceTree = "<group>"; };
+		8C305EA22B6D27E50003CAC4 /* TopicFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicFeed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 		8C305E852B6CD5E70003CAC4 /* UnsplashApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C305EA22B6D27E50003CAC4 /* TopicFeed.swift */,
+				8C305EA02B6D1ECB0003CAC4 /* UnsplashTopic.swift */,
 				8C305E9E2B6CFBD70003CAC4 /* UnsplashPhoto.swift */,
 				8C305E862B6CD5E70003CAC4 /* UnsplashAppApp.swift */,
 				8C305E882B6CD5E70003CAC4 /* ContentView.swift */,
@@ -156,7 +162,9 @@
 				8C305E9D2B6CF7000003CAC4 /* FeedState.swift in Sources */,
 				8C305E9B2B6CF22F0003CAC4 /* UnsplashAPI.swift in Sources */,
 				8C305E892B6CD5E70003CAC4 /* ContentView.swift in Sources */,
+				8C305EA12B6D1ECB0003CAC4 /* UnsplashTopic.swift in Sources */,
 				8C305E952B6CED890003CAC4 /* PListManager.swift in Sources */,
+				8C305EA32B6D27E50003CAC4 /* TopicFeed.swift in Sources */,
 				8C305E9F2B6CFBD70003CAC4 /* UnsplashPhoto.swift in Sources */,
 				8C305E872B6CD5E70003CAC4 /* UnsplashAppApp.swift in Sources */,
 			);

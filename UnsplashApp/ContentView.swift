@@ -35,7 +35,7 @@ extension Color {
         default:
             (a, r, g, b) = (1, 1, 1, 0)
         }
-
+        
         self.init(
             .sRGB,
             red: Double(r) / 255,
@@ -56,12 +56,59 @@ struct ContentView: View {
                 Button(action: {
                     Task {
                         await feedState.fetchHomeFeed()
+                        await feedState.fetchTopicsFeed()
                     }
                 }, label: {
-                    Text("Load Data")
+                    Text("Load...")
                 })
+                ScrollView(Axis.Set.horizontal) {
+                    LazyHGrid(rows: [GridItem(.flexible(minimum: 50, maximum: 100))]) {
+                        if (feedState.topicsFeed != nil) {
+                            Spacer()
+                            HStack(spacing: 23) {
+                                ForEach(feedState.topicsFeed!, id: \.id) { topic in
+                                    NavigationLink {
+                                        TopicFeed(topic: topic)
+                                    } label: {
+                                        VStack {
+                                            AsyncImage(url: URL(string: topic.coverPhoto.urls.regular)) { image in
+                                                image
+                                                    .centerCropped()
+                                                    .frame(width: 100, height: 50)
+                                                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                                            } placeholder: {
+                                                RoundedRectangle(cornerRadius: 8)
+                                                    .foregroundStyle(Color(hex: topic.coverPhoto.color))
+                                                    .frame(width: 100, height: 50)
+                                            }
+                                            Text(topic.title)
+                                        }
+                                    }
+                                }
+                            }
+                            Spacer()
+                        } else {
+                            HStack(spacing: 20) {
+                                Spacer()
+                                ForEach(0 ..< 3) { item in
+                                    VStack {
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .frame(width: 100, height: 50)
+                                            .foregroundStyle(.placeholder)
+                                        RoundedRectangle(cornerRadius: 8)
+                                            .frame(width: 80, height: 20)
+                                            .foregroundStyle(.placeholder)
+                                    }
+                                }
+                                Spacer()
+                            }
+                        }
+                    }
+                }
+                .frame(height: 100)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                
                 ScrollView {
-                    
                     LazyVGrid(columns: [GridItem(.flexible(minimum: 150), spacing: 8), GridItem(.flexible(minimum: 150), spacing: 8)]) {
                         if (feedState.homeFeed != nil) {
                             ForEach(feedState.homeFeed!, id: \.id) { img in
@@ -87,7 +134,6 @@ struct ContentView: View {
                 }
                 .padding(.horizontal)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
-                
             }
             .navigationBarTitle("Feed")
         }
