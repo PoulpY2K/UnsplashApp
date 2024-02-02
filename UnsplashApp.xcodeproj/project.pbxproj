@@ -11,6 +11,8 @@
 		8C305E892B6CD5E70003CAC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305E882B6CD5E70003CAC4 /* ContentView.swift */; };
 		8C305E8B2B6CD5E80003CAC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C305E8A2B6CD5E80003CAC4 /* Assets.xcassets */; };
 		8C305E8E2B6CD5E80003CAC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C305E8D2B6CD5E80003CAC4 /* Preview Assets.xcassets */; };
+		8C305E952B6CED890003CAC4 /* PListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C305E942B6CED890003CAC4 /* PListManager.swift */; };
+		8C305E992B6CEDDB0003CAC4 /* environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C305E982B6CEDDB0003CAC4 /* environment.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		8C305E882B6CD5E70003CAC4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C305E8A2B6CD5E80003CAC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C305E8D2B6CD5E80003CAC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C305E942B6CED890003CAC4 /* PListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListManager.swift; sourceTree = "<group>"; };
+		8C305E982B6CEDDB0003CAC4 /* environment.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = environment.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				8C305E882B6CD5E70003CAC4 /* ContentView.swift */,
 				8C305E8A2B6CD5E80003CAC4 /* Assets.xcassets */,
 				8C305E8C2B6CD5E80003CAC4 /* Preview Content */,
+				8C305E942B6CED890003CAC4 /* PListManager.swift */,
+				8C305E982B6CEDDB0003CAC4 /* environment.plist */,
 			);
 			path = UnsplashApp;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				8C305E8E2B6CD5E80003CAC4 /* Preview Assets.xcassets in Resources */,
 				8C305E8B2B6CD5E80003CAC4 /* Assets.xcassets in Resources */,
+				8C305E992B6CEDDB0003CAC4 /* environment.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C305E892B6CD5E70003CAC4 /* ContentView.swift in Sources */,
+				8C305E952B6CED890003CAC4 /* PListManager.swift in Sources */,
 				8C305E872B6CD5E70003CAC4 /* UnsplashAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
